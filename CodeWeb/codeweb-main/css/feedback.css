@@ -1,0 +1,117 @@
+/* Reset de Margens e Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  display: flex;
+}
+
+/* Botão do Menu */
+.menu-toggle {
+  background-color: #0e4781; /* Cor do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 10px; /* Espaço interno */
+  position: absolute; /* Posiciona o botão */
+  z-index: 10; /* Mantém o botão acima do menu */
+  left: 10px; /* Distância da esquerda */
+  top: 10px; /* Distância do topo */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Menu Lateral */
+.sidenav {
+  width: 250px; /* Largura do menu lateral */
+  background-color: #1e1e24; /* Cor de fundo do menu lateral */
+  padding: 20px;
+  height: 100vh; /* Altura total da tela */
+  position: fixed; /* Fixa o menu lateral na tela */
+  left: -250px; /* Inicialmente escondido à esquerda */
+  transition: left 0.3s ease; /* Animação ao abrir/fechar */
+}
+
+.sidenav.open {
+  left: 0; /* Posiciona o menu lateral quando aberto */
+}
+
+.sidenav ul {
+  list-style: none;
+}
+
+.sidenav li {
+  margin-bottom: 20px;
+}
+
+.sidenav a {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+.sidenav img {
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/* Conteúdo Principal */
+.main-content {
+  margin-left: 0; /* Inicialmente sem margem */
+  padding: 20px;
+  flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+  transition: margin-left 0.3s ease; /* Animação ao abrir/fechar */
+}
+
+.main-content.shift {
+  margin-left: 250px; /* Espaço para o menu lateral quando aberto */
+}
+
+.feedback-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 600px;
+  margin: auto; /* Centraliza o contêiner de feedback */
+}
+
+h1 {
+  text-align: center;
+  color: #0e4781;
+  margin-bottom: 20px;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feedback-form input, 
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.feedback-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #0e4781;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #0b365f;
+}

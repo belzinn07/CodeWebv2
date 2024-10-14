@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code web</title>
+</head>
+<body>
+  <section class="geral">
+
+
+    <!--menu lateral-->
+    <nav class="sidenav">
+        <ul>
+             
+            
+            <li class="side_logo">
+                <a href="#"><i class="fas fa-th-large"><img src="imgs/logo1.png" height="50px" width="50px"></i><span>Code web</span></a>
+            </li>
+            
+            <!-- Ícones -->
+
+      
+            <li>
+                <a href="equipe.html"><i class="fas fa-th-large"><img src="imgs/equipe.png" height="50px" width="50px"></i><span>Nossa equipe</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-utensils"><img src="imgs/localizacao.png" height="50px" width="50px"></i><span>Nossa localização</span></i></a>
+                
+            </li>
+            
+            <li>
+                          <div id="acessibilidade">
+            <button onclick="aumentarFonte()">A+</button>
+            <button onclick="diminuirFonte()">A-</button>
+            <button onclick="alternarContraste()">Contraste</button>
+            <script>let tamanhoFonte = 16;
+
+function aumentarFonte() {
+    tamanhoFonte += 2;
+    document.body.style.fontSize = tamanhoFonte + "px";
+}
+
+function diminuirFonte() {
+    if (tamanhoFonte > 12) {
+        tamanhoFonte -= 2;
+        document.body.style.fontSize = tamanhoFonte + "px";
+    }
+}
+
+function alternarContraste() {
+    document.body.classList.toggle("high-contrast");
+}</script>
+</li>
+
+            <li>
+                <a href="feedback.html"><i class="fas fa-utensils"><img src="imgs/feedback.png" height="40px" width="40px"></i><span>Nos avalie </span></i></a>
+            </li>
+            
+
+            
+           
+        </ul>
+    </nav>
+
+    <!--cabeçalho e pesquisa-->
+
+       
+        <header> 
+
+
+            
+            <!-- Logo -->
+            <a href="index.html" class="logo"><h1>CODE<span>WEB</span></h1></a>
+
+
+            <!-- Barra de navegação -->
+           <nav class="nav">
+<div class="menu">
+  <div class="item">
+    <a href="#" class="link">
+      <span> Sobre </span>
+      <svg viewBox="0 0 360 360" xml:space="preserve">
+        <g id="SVGRepo_iconCarrier">
+          <path
+            id="XMLID_225_"
+            d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+          ></path>
+        </g>
+      </svg>
+    </a>
+    <div class="submenu">
+      <div class="submenu-item">
+        <a href="#" class="submenu-link"> Sobre nós </a>
+      </div>
+      <div class="submenu-item">
+        <a href="#" class="submenu-link"> Contatos</a>
+      </div> 
+      
+        </div>
+
+    </header>
+      
+    </div>
+  </div>
+</div>
+</nav>
+
+            <input type="search" placeholder="pesquise categorias" class="pesquise"  >
+            <button class="buscar">Buscar</button>
+        </header>   
+  
+   
+
+     <!--conteudo1-->
+    <div class="conteudo1">
+        <div class="coluna1">
+            <h1>Criação de Sites</h1>
+            <hr><br>
+            <p>Transforme sua presença online com um site<br> profissional e atraente!</p>
+            <br>
+            <button class="button2"><a>Fazer um orçamento</a></button>
+        </div>
+        <div class="coluna2"><img src="imgs/img1.png"  width="400px" height="400px"></div>
+    </div>
+
+    <!--carrossel-->
+
+    
+     <!--video e texto 2-->
+    <div class="conteudo2">
+        <div class="video1">
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/RFAj3nrSW0c" title="7 Vantagens de ter um site profissional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="texto2">
+            <p>Clique no botão abaixo e descubra como podemos<br>
+        criar o site perfeito para seu negócio.</p>
+        <button class="button3">Saiba mais</button></div>
+    </div>
+
+
+    <!--Portfolio-->
+  <section id="portfolio">
+  <h2>Nosso Portfólio</h2>
+  <div class="portfolio-container">
+    <div class="portfolio-item">
+      <img src="imgs/Portfolio1.png" alt="Projeto 1">
+      <div class="portfolio-info">
+        <h3>Storebook</h3>
+        <p>Site de venda de livros</p>
+      </div>
+    </div>
+    
+    <div class="portfolio-item">
+      <img src="imgs/Portfolio1.png" alt="Projeto 2">
+      <div class="portfolio-info">
+        <h3>Storebook</h3>
+        <p>Site de venda de livros</p>
+      </div>
+    </div>
+    
+    <div class="portfolio-item">
+      <img src="imgs/Portfolio1.png" alt="Projeto 3">
+      <div class="portfolio-info">
+        <h3>Storebook</h3>
+        <p>Site de venda de livros</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+     <!--botao de saiba mais do portifolio-->
+    
+     
+
+
+    <!--vantagens-->
+
+    <h1 class="titulo_vantagens">Vantagens de ter um site</h1>
+    <div class="vantagens">
+       
+        <div class="box">/* From Uiverse.io by vamsidevendrakumar */ 
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <p>Aumento da Visibilidade</p>
+                </div>
+                <div class="card-back">
+                  <p>Um site permite que sua empresa seja encontrada facilmente por clientes em potencial a qualquer hora e de qualquer lugar, ampliando seu alcance no mercado.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+        <div class="box">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <p>Credibilidade e Profissionalismo</p>
+                </div>
+                <div class="card-back">
+                  <p>Ter um site bem projetado transmite confiança e credibilidade aos seus clientes, fortalecendo a imagem da sua marca e destacando-se da concorrência.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+        <div class="box" >
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <p>Canal de Vendas e Marketing 24/7</p>
+                </div>
+                <div class="card-back">
+                  <p>Um site funciona como uma loja aberta 24 horas, permitindo que você apresente seus produtos e serviços, gere leads e realize vendas mesmo fora do horário comercial.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+    </div>
+
+   
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+    <!--rodape-->
+    <footer>
+        <div class="cf">
+            <div class="rf">
+              
+  
+                <div class="fc">
+                  <ul>
+                    <li>               <img src="imgs/logo1.png" height="160px" width="160px"></li>
+                  </ul>
+                </div>
+
+                <div class="fk">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#"> Quem somos </a></li>
+                        <li><a href="#"> lorem </a></li>
+                        <li><a href="#"> política de privacidade </a></li>
+                        <li><a href="#"> termos & condições</a></li>
+                    </ul>
+                </div>
+                
+
+                <div class="fc">
+                    <h4>Nos procure</h4>
+
+                    <ul>
+                        <li><a href="https://wa.me/558598439210"><img src="imgs/whatzap.png" height="25"
+                                    width="25">ㅤ   whatsapp</a></li>
+                        <li><a href="https://www.instagram.com/code.web._"><img
+                                    src="imgs/instagram.png" height="25"
+                                    width="25">ㅤ  instagram</a></li>
+                        <li><a href="https://www.youtube.com/@alissonsousapereira"><img
+                                    src="imgs/linkedin.png" height="25" width="25">ㅤ  Linkedin</a></li>
+                    </ul>
+                </div>
+              
+
+                
+            </div>
+        </div>
+    </footer>
+    </section>
+</body>
+</html>

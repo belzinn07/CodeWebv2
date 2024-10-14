@@ -1,0 +1,371 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Optima, sans-serif;
+    background: linear-gradient(90deg, black,##0e4781);
+}
+/* SIDENAV */
+.sidenav {
+grid-area: sidenav;background: #1e1e24;
+height: 100vh;
+width: 6em;
+position: fixed;
+transition: width 200ms ease;
+z-index:1;
+}
+
+.sidenav ul {
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.sidenav li {
+width: 100%;
+text-align: center;
+list-style: none;
+}
+
+.sidenav li:last-child {
+margin-top: auto;
+}
+
+.sidenav a {
+display: flex;
+align-items: center;
+height: 5rem;
+color: #fff;
+filter: grayscale(100%) opacity(0.7);
+transition: filter 100ms ease;
+transition: background 200ms ease;
+text-decoration: none;
+}
+
+.sidenav a:hover {
+filter: grayscale(0%) opacity(1);
+background: #19191E;
+}
+
+.sidenav li:first-child a {
+filter: grayscale(0%) opacity(1);
+}
+
+.sidenav li:first-child a:hover {
+background: #1e1e24;
+}
+
+.sidenav span {
+display: none;
+margin-left: 1rem;
+font-size: 1.225em;
+}
+
+.sidenav i {
+min-width: 2rem;
+margin: 0 1.5rem;
+font-size: 1.5em;
+}
+
+.side_logo {
+font-weight: bold;
+text-transform: uppercase;
+margin-bottom: 1rem;
+font-size: 1.5rem;
+letter-spacing: 0.3ch;
+font-family: Optima, sans-serif;
+}
+
+.sidenav:hover {
+width: 16rem;
+}
+
+.sidenav:hover span {
+display: block;
+}
+
+#equipe {
+  padding: 50px 0;
+  text-align: center;
+    background: linear-gradient(90deg,#0e4781, black);
+    margin-bottom: 0;
+    
+}
+
+#equipe h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.equipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  
+
+}
+
+.equipe-item {
+  background-color: #44474b;
+  border: 1px solid #176fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.equipe-item:hover {
+  transform: scale(1.05);
+}
+
+.equipe-item img {
+  width: 100%;  /* Mantém a imagem ocupando toda a largura do contêiner */
+  height: 400px;  /* Define uma altura fixa */
+  object-fit: cover;  /* Faz com que a imagem se ajuste ao contêiner, cortando o excesso */
+}
+
+.equipe-info {
+  padding: 20px;
+}
+
+.equipe-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #176fff;
+}
+
+.equipe-info .cargo {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: aliceblue;
+}
+
+.equipe-info p {
+  font-size: 1em;
+  color: aliceblue;
+}
+
+/*rodape*/
+footer{
+    background:#1a1a1a;
+    
+    padding: 50px 0;
+}
+.cf{
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+.rf{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.fc{
+    width: 25%;
+    padding: 0 15px;
+}
+.fc h4{
+    font-size: 22px;
+    color: white;
+   
+    font-weight: 500;
+    
+    text-transform: uppercase;
+    margin-right: 120px;
+}
+.fc ul{
+    list-style: none;
+}
+.fc ul li{
+    margin: 10px 0;
+}
+.fc ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+    display: flex;
+}
+.fc ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+}
+
+.fc .form-sub input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color:  rgb(23, 23, 54);
+}
+.fc .form-sub input::placeholder{
+    color: white;
+}
+.fc .form-sub button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px; 
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(23, 23, 54);
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;        
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;}
+
+    form [type="submit"]{   /*aqui esta apenas formatando este formulario*/
+        height: 60px;
+        width: 60%;
+        background-color: blueviolet;
+        color:white;
+        font-weight: bold;
+       }
+       
+       form [type="submit"]:hover{
+       
+           cursor:pointer;
+       } 
+       
+       input{
+           margin-top: 25px;
+           height: 40px;
+           border-radius: 20px;
+           border:none;
+           font-size: 15px;
+           text-align: center;
+           margin: 10px 0px 0px 0px;
+       }
+
+       .fs button{
+        height: 50px;
+        width: 150px;
+        background-color: #3533cd;
+        border-radius: 50px;
+        margin-left: 25px;
+        color: white;
+       
+        font-size: 15px;
+        
+       }
+       
+
+      .fs button:hover{
+        transform: scale(1.2);
+
+      }
+    
+ .code{
+    margin-left: 50px;
+    margin-top: -120px;
+ }
+
+ .logo img{
+   margin-left:500px ;
+       transition: all 0.3s ease;
+ }
+
+ .fk h4{
+    font-size: 22px;
+    color: white;
+   
+    font-weight: 500;
+    
+    text-transform: uppercase;
+    margin-right: 120px;
+ }
+
+
+
+.fk ul{
+    list-style: none;
+}
+.fk ul li{
+    margin: 10px 0;
+}
+.fk ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+    display: flex;
+}
+.fk ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+}
+
+.fk{
+    margin-left: 100px;
+}
+
+
+/* Responsividade */
+@media (max-width: 968px) {
+  .equipe-container {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top:20px;
+  }
+  
+  .rf {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .fc{
+    margin-top: 50px;
+  }
+  
+  .fk{
+    margin-top: 50px;
+  }
+  
+  .rf .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}
+}
+
+@media (max-width: 768px) {
+  .equipe-container {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+@media (max-width: 480px) {
+  .equipe-container {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+}
+
