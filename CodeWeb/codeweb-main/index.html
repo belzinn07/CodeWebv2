@@ -10,59 +10,59 @@
   <section class="geral">
 
 
-    <!--menu lateral-->
-    <nav class="sidenav">
-        <ul>
-             
-            
-            <li class="side_logo">
-                <a href="#"><i class="fas fa-th-large"><img src="imgs/logo1.png" height="50px" width="50px"></i><span>Code web</span></a>
-            </li>
-            
-            <!-- Ícones -->
+  <!-- Botão para abrir/fechar o menu lateral -->
+  <button class="menu-toggle" id="menuToggle" >menu<i class="fas fa-bars"></i></button>
 
+  <!-- Menu Lateral -->
+  <nav class="sidenav" id="sidenav">
+    <ul>
+      <li class="side_logo">
+        <a href="#"><img src="imgs/logo1.png" height="50px" width="50px" alt="Logo"><span>Code Web</span></a>
+      </li>
+      <li>
+        <a href="index.html"><img src="imgs/inicio.png" height="50px" width="50px" alt="Início"><span>Início</span></a>
+      </li>
+      <li>
+        <a href="equipe.html"><img src="imgs/equipe.png" height="50px" width="50px" alt="Equipe"><span>Nossa Equipe</span></a>
+      </li>
+      <li>
+        <a href="#"><img src="imgs/localizacao.png" height="50px" width="50px" alt="Localização"><span>Nossa Localização</span></a>
+      </li>
       
-            <li>
-                <a href="equipe.html"><i class="fas fa-th-large"><img src="imgs/equipe.png" height="50px" width="50px"></i><span>Nossa equipe</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-utensils"><img src="imgs/localizacao.png" height="50px" width="50px"></i><span>Nossa localização</span></i></a>
-                
-            </li>
-            
-            <li>
-                          <div id="acessibilidade">
-            <button onclick="aumentarFonte()">A+</button>
-            <button onclick="diminuirFonte()">A-</button>
-            <button onclick="alternarContraste()">Contraste</button>
-            <script>let tamanhoFonte = 16;
+      <li>
+        <div id="acessibilidade">
+<button onclick="aumentarFonte()">A+</button>
+<button onclick="diminuirFonte()">A-</button>
+<button onclick="alternarContraste()">Contraste</button>
+<script>let tamanhoFonte = 16;
 
 function aumentarFonte() {
-    tamanhoFonte += 2;
-    document.body.style.fontSize = tamanhoFonte + "px";
+tamanhoFonte += 2;
+document.body.style.fontSize = tamanhoFonte + "px";
 }
 
 function diminuirFonte() {
-    if (tamanhoFonte > 12) {
-        tamanhoFonte -= 2;
-        document.body.style.fontSize = tamanhoFonte + "px";
-    }
+if (tamanhoFonte > 12) {
+tamanhoFonte -= 2;
+document.body.style.fontSize = tamanhoFonte + "px";
+}
 }
 
 function alternarContraste() {
-    document.body.classList.toggle("high-contrast");
+document.body.classList.toggle("high-contrast");
 }</script>
 </li>
 
-            <li>
-                <a href="feedback.html"><i class="fas fa-utensils"><img src="imgs/feedback.png" height="40px" width="40px"></i><span>Nos avalie </span></i></a>
-            </li>
-            
+      <li>
+        <a href="feedback.html"><img src="imgs/feedback.png" height="40px" width="40px" alt="Feedback"><span>Nos Avalie</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
 
             
-           
-        </ul>
-    </nav>
+
 
     <!--cabeçalho e pesquisa-->
 
@@ -135,8 +135,8 @@ function alternarContraste() {
         </div>
 
         <div class="texto2">
-            <p>Clique no botão abaixo e descubra como podemos<br>
-        criar o site perfeito para seu negócio.</p>
+            <p>Clique no botão abaixo e descubra como <br>podemos
+        criar o site perfeito <br>para seu negócio.</p>
         <button class="button3">Saiba mais</button></div>
     </div>
 
@@ -279,5 +279,7 @@ function alternarContraste() {
         </div>
     </footer>
     </section>
+
+    <script src="script.js"></script> <!-- Conecte o arquivo JS -->
 </body>
 </html>

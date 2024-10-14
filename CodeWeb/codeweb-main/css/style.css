@@ -13,84 +13,55 @@ body {
 .geral{
   height: 100%;
 }
-/* SIDENAV */
+
+/*menu hamburguer*/
+
+/* Botão do Menu */
+.menu-toggle {
+  background-color: gray; /* Cor do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 10px; /* Espaço interno */
+  position: absolute; /* Posiciona o botão */
+  z-index: 10; /* Mantém o botão acima do menu */
+  left: 10px; /* Distância da esquerda */
+  top: 10px; /* Distância do topo */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Menu Lateral */
 .sidenav {
-grid-area: sidenav;background: #1e1e24;
-height: 100vh;
-width: 6em;
-position: fixed;
-transition: width 200ms ease;
-z-index:1;
+  width: 250px; /* Largura do menu lateral */
+  background-color: #1e1e24; /* Cor de fundo do menu lateral */
+  padding: 20px;
+  height: 100vh; /* Altura total da tela */
+  position: fixed; /* Fixa o menu lateral na tela */
+  left: -250px; /* Inicialmente escondido à esquerda */
+  transition: left 0.3s ease; /* Animação ao abrir/fechar */
+}
+
+.sidenav.open {
+  left: 0; /* Posiciona o menu lateral quando aberto */
 }
 
 .sidenav ul {
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
+  list-style: none;
 }
 
 .sidenav li {
-width: 100%;
-text-align: center;
-list-style: none;
-}
-
-.sidenav li:last-child {
-margin-top: auto;
+  margin-bottom: 20px;
 }
 
 .sidenav a {
-display: flex;
-align-items: center;
-height: 5rem;
-color: #fff;
-filter: grayscale(100%) opacity(0.7);
-transition: filter 100ms ease;
-transition: background 200ms ease;
-text-decoration: none;
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
 }
 
-.sidenav a:hover {
-filter: grayscale(0%) opacity(1);
-background: #19191E;
-}
-
-.sidenav li:first-child a {
-filter: grayscale(0%) opacity(1);
-}
-
-.sidenav li:first-child a:hover {
-background: #1e1e24;
-}
-
-.sidenav span {
-display: none;
-margin-left: 1rem;
-font-size: 1.225em;
-}
-
-.sidenav i {
-min-width: 2rem;
-margin: 0 1.5rem;
-font-size: 1.5em;
-}
-
-.side_logo {
-font-weight: bold;
-text-transform: uppercase;
-margin-bottom: 1rem;
-font-size: 1.5rem;
-letter-spacing: 0.3ch;
-font-family: Optima, sans-serif;
-}
-
-.sidenav:hover {
-width: 16rem;
-}
-
-.sidenav:hover span {
-display: block;
+.sidenav img {
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
 }
 
 
@@ -365,6 +336,7 @@ input{
     margin-left: 300px;
     color: white;
     justify-content: space-evenly;
+    transition: transform 0.3s ease;
  
 
 }
@@ -383,7 +355,14 @@ input{
     margin-top: 100px;
     margin-left: -150px;
 }
-
+.coluna2{
+  max-width: 400px;
+  max-height: 400px;
+}
+.coluna2 img{
+  max-width: 100%;
+  height: auto;
+}
 
 .button2{
     padding: 10px;
@@ -413,6 +392,9 @@ input{
     margin: auto;
     box-shadow: 20px 15px 20px rgba(23, 111, 255, 0.5); /* Sombra em volta da div */
     transform: all 0.3 ease;
+    
+    
+   
 }
 
 .video1{
@@ -493,201 +475,6 @@ input{
 .portfolio-info p {
   font-size: 1em;
   color: #666;
-}
-
-/* Responsividade */
-@media (max-width: 968px){
-  
-      .conteudo1{
-
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-  }
-  
-  .coluna1{
-    
-    margin: 0 auto;
-  }
-  
-  .conteudo2{
-        flex-direction: column;
-    align-items: center;
-    background:none ;
-    border: none;
-    box-shadow: none;
-    height: 1000px;
-    width:500px;
-    margin: auto;
-  }
-  
-  
-  iframe{
-    width: 400px;
-    margin: -20% ;
-    align-items: center;
-  }
-  
-  .portfolio-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .vantagens{
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
-
-  .rf {
-    flex-direction: column;
-    align-items: center;
-
-    
-  }
-  
-  .fc{
-    margin-top: 50px;
-  }
-  
-  .fk{
-    margin-top: 50px;
-  }
-  
-  .rf .logo {
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-}
-  
-}
-@media (max-width: 768px) {
-    .conteudo1{
-
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-  }
-  
-  .coluna1{
-    
-    margin: 0 auto;
-  }
-  
-  .conteudo2{
-        flex-direction: column;
-    align-items: center;
-    background:none ;
-    border: none;
-    box-shadow: none;
-    height: 1000px;
-    width:500px;
-    margin: auto;
-  }
-  
-  .video1{
-    width: 250px;
-  }
-  iframe{
-    width: 400px;
-    margin: 0 auto;
-    align-items: center;
-  }
-  
-  .portfolio-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .vantagens{
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
-
-  .rf {
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
-  .fc{
-    margin-top: 50px;
-  }
-  
-  .fk{
-    margin-top: 50px;
-  }
-  
-  .rf .logo {
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-}
-
-
-@media (max-width: 480px) {
-      .conteudo1{
-
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-  }
-  
-  .coluna1{
-    
-    margin: 0 auto;
-  }
-  
-  .conteudo2{
-        flex-direction: column;
-    align-items: center;
-    background:none ;
-    border: none;
-    box-shadow: none;
-    height: 1000px;
-    width:500px;
-    margin: auto;
-  }
-  
-  .video1{
-    width: 250px;
-  }
-  iframe{
-    width: 400px;
-    margin: 0 auto;
-    align-items: center;
-  }
-  
-  .portfolio-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .vantagens{
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
-  .fk {
-    width: 100%;
-  }
-
-  footer {
-    padding: 20px 0;
-  }
-
-  .footer-column h4 {
-    font-size: 1.2em;
-  }
-
-  .fk p, .fk a {
-    font-size: 0.9em;
-  }
 }
 
 /*vantagens*/
@@ -948,3 +735,238 @@ form{
 
 
   
+/* Responsividade */
+@media (max-width: 968px){
+  
+  .conteudo1{
+
+flex-direction: column;
+align-items: center;
+margin: auto;
+}
+
+.coluna1{
+
+margin: 0 auto;
+}
+
+.conteudo2{
+    flex-direction: column;
+align-items: center;
+background:none ;
+border: none;
+box-shadow: none;
+height: 1000px;
+width:500px;
+margin: auto;
+}
+
+
+iframe{
+width: 400px;
+margin: -20% ;
+align-items: center;
+}
+
+.portfolio-container {
+flex-direction: column;
+align-items: center;
+}
+.vantagens{
+flex-direction: column;
+align-items: center;
+
+}
+
+
+.rf {
+flex-direction: column;
+align-items: center;
+
+
+}
+
+.fc{
+margin-top: 50px;
+}
+
+.fk{
+margin-top: 50px;
+}
+
+.rf .logo {
+flex-direction: column;
+align-items: center;
+}
+
+
+}
+
+
+@media (max-width: 768px) {
+.conteudo1{
+
+flex-direction: column;
+align-items: center;
+margin: auto;
+}
+
+.coluna1{
+
+margin: 0 auto;
+}
+
+.conteudo2{
+    flex-direction: column;
+align-items: center;
+background:none ;
+border: none;
+box-shadow: none;
+height: 1000px;
+width:500px;
+margin: auto;
+}
+
+.video1{
+width: 250px;
+}
+iframe{
+width: 400px;
+margin: 0 auto;
+align-items: center;
+}
+
+.portfolio-container {
+flex-direction: column;
+align-items: center;
+}
+.vantagens{
+flex-direction: column;
+align-items: center;
+
+}
+
+
+.rf {
+flex-direction: column;
+align-items: center;
+
+}
+
+.fc{
+margin-top: 50px;
+}
+
+.fk{
+margin-top: 50px;
+}
+
+.rf .logo {
+flex-direction: column;
+align-items: center;
+}
+
+
+}
+
+
+@media (max-width: 480px) {
+.pesquise{
+margin-left: 25%;
+padding: 4px;
+
+}    
+
+
+.conteudo1{
+ 
+flex-direction: column;
+align-items: center;
+margin: auto;
+}
+
+.coluna1{
+
+margin: 0 auto;
+max-width: 300px;
+}
+
+.coluna1 h1{
+margin-top: 10vh;
+font-size: 40px;
+text-align: center;
+} 
+
+.coluna1 p{
+font-size: 15px;
+text-align: center;
+} 
+
+.button2{
+margin-left:15%;
+
+}
+.conteudo2{
+    flex-direction: column;
+align-items: center;
+background:none ;
+border: none;
+box-shadow: none;
+height: 1000px;
+width:500px;
+margin: auto;
+
+
+}
+
+.texto2{
+  margin-top: -25%;
+  margin-left: -13%;
+}
+
+.video1{
+width: 250px;
+}
+iframe{
+width: 350px;
+margin-left: -65%;
+align-items: center;
+}
+
+#portfolio{
+  margin-top: -25%;
+}
+.portfolio-container {
+  
+flex-direction: column;
+align-items: center;
+}
+.vantagens{
+flex-direction: column;
+align-items: center;
+
+}
+footer{
+  height: 1000px;
+  align-items: center;
+  margin: auto;
+}
+.rf {
+  flex-direction: column;
+  align-items: center;
+  
+  }
+  
+  .fc{
+  margin-top: 50px;
+  }
+  
+  .fk{
+  margin-top: 50px;
+  }
+  
+  .rf .logo {
+  flex-direction: column;
+  margin-left: -25%;
+  }
+}
