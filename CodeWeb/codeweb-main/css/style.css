@@ -304,6 +304,11 @@ button {
     padding: 5px 10px;
 }
 
+a{
+  text-decoration:none ;
+  color: white;
+}
+
 
 
 /*Barra de pesquisa*/
