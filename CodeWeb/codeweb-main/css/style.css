@@ -382,6 +382,26 @@ input{
 
 }
 
+/*animação dos botões*/
+
+button:hover{
+  animation-name: botao;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  box-shadow: 0 0 50px 20px #0e4781; 
+}
+
+@keyframes botao{
+  0%{
+      transform: scale(1);
+  }
+  100%{
+      transform: scale(1.05);
+  }
+
+}
 /*carrossel*/
 
 
@@ -561,7 +581,9 @@ input{
 
 
   
-
+.espaco{
+  height: 200px;
+}
 
 
 
